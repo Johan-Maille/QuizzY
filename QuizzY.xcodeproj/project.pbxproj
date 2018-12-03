@@ -60,10 +60,6 @@
 				D8BFF79D21B50F6800BCC2D3 /* Model */,
 				D8BFF79C21B50F6500BCC2D3 /* View */,
 				D8BFF79E21B50F8E00BCC2D3 /* Supporting Files */,
-				D8BFF78921B50F0F00BCC2D3 /* AppDelegate.swift */,
-				D8BFF79021B50F0F00BCC2D3 /* Assets.xcassets */,
-				D8BFF79221B50F0F00BCC2D3 /* LaunchScreen.storyboard */,
-				D8BFF79521B50F0F00BCC2D3 /* Info.plist */,
 			);
 			path = QuizzY;
 			sourceTree = "<group>";
@@ -95,6 +91,10 @@
 		D8BFF79E21B50F8E00BCC2D3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D8BFF79021B50F0F00BCC2D3 /* Assets.xcassets */,
+				D8BFF79521B50F0F00BCC2D3 /* Info.plist */,
+				D8BFF79221B50F0F00BCC2D3 /* LaunchScreen.storyboard */,
+				D8BFF78921B50F0F00BCC2D3 /* AppDelegate.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -317,7 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = QuizzY/Info.plist;
+				INFOPLIST_FILE = "QuizzY/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +334,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = QuizzY/Info.plist;
+				INFOPLIST_FILE = "QuizzY/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
