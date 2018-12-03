@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct Test {
+struct Question: Decodable {
     var imageName: String = "Loading"
     var name: String = "Loading"
-    
 }

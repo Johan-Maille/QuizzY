@@ -15,26 +15,47 @@ class Game {
     enum Mod {
         case text, image
     }
+    enum Difficulty {
+        case easy, medium, hard
+    }
     
     private var currentIndex: Int = 0
     var state: State = .ongoing
-    var mod: Mod = .text
+    var gameMod: Mod = .text
     var score: Int = 0
-    var tests: [Test] = []
+    var questions: [Question] = []
+    var percentage: Float = 1.0
+    var questionCount: Int = 0
     
-    var currentTest: Test {
-        return tests[currentIndex]
+    var currentQuestion: Question {
+        return questions[currentIndex]
     }
     
     func answerText(with answer: String) {
-        if answer == currentTest.name{
-            score += 1
+        var questionIsDone: Bool = false
+        
+        switch gameMod {
+            case .text:
+                if answer == currentQuestion.name {
+                    score += 1
+                }
+            
+                questionIsDone = (percentage >= 80)
+            
+            case .image:
+                if answer == currentQuestion.imageName {
+                    score += 1
+                }
+                
+                questionIsDone = true
         }
         
-        if currentIndex >= tests.count-1 {
-            state = .over
-        } else {
-            currentIndex += 1
+        if questionIsDone {
+            if currentIndex > questionCount {
+                state = .over
+            } else {
+                currentIndex += 1
+            }
         }
     }
 }
