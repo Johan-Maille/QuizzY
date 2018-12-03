@@ -167,7 +167,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Retour"/>
                                                 <connections>
-                                                    <segue destination="BYZ-38-t0r" kind="presentation" id="HFB-ko-7wl"/>
+                                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="partialCurl" id="HFB-ko-7wl"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -262,6 +262,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dnE-m0-cP8"/>
-        <segue reference="ecI-Ta-QXj"/>
+        <segue reference="HFB-ko-7wl"/>
     </inferredMetricsTieBreakers>
 </document>
