@@ -8,6 +8,8 @@
 
 import Foundation
 
-class Test {
-    var imagePath = 
+struct Test {
+    var imageName: String = "Loading"
+    var name: String = "Loading"
+    
 }
