@@ -22,8 +22,24 @@ class MainMenu: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let chooseDifficulty = segue.destination as? ChooseDifficulty {
+            let game = Game()
+            
+//            switch segue.identifier {
+//                case "jeu1":
+//                    game.gameMod = .text
+//
+//            case .none:
+//                <#code#>
+//            case .some(_):
+//                <#code#>
+//            }
+            
+            
+            chooseDifficulty.game = game
+        }
+    }
     
-    
-
 }
 

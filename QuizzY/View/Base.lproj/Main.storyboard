@@ -13,7 +13,7 @@
         <!--Page Principale-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="ViewController" id="BYZ-38-t0r" userLabel="Page Principale" customClass="ViewController" customModule="QuizzY" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainMenu" id="BYZ-38-t0r" userLabel="Page Principale" customClass="ViewController" customModule="QuizzY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="30"/>
                                 <state key="normal" title="Jeux 1"/>
                                 <connections>
-                                    <segue destination="BMN-ar-bfO" kind="presentation" id="dnE-m0-cP8"/>
+                                    <segue destination="BMN-ar-bfO" kind="presentation" identifier="jeu1" id="ek4-Rw-jZD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LAI-16-4q8">
@@ -35,7 +35,7 @@
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="30"/>
                                 <state key="normal" title="Jeux 2"/>
                                 <connections>
-                                    <segue destination="BMN-ar-bfO" kind="presentation" id="0Wx-Kf-Jho"/>
+                                    <segue destination="BMN-ar-bfO" kind="presentation" identifier="jeu2" id="0Wx-Kf-Jho"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QuizzY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKA-40-Vxz">
@@ -132,7 +132,7 @@
         <!--Choix Difficulte-->
         <scene sceneID="BJX-6W-9wq">
             <objects>
-                <viewController id="BMN-ar-bfO" userLabel="Choix Difficulte" sceneMemberID="viewController">
+                <viewController title="ChooseDifficulty" id="BMN-ar-bfO" userLabel="Choix Difficulte" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ywU-1H-xYs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,7 +192,6 @@
         <!--Jeux 2-->
         <scene sceneID="NYw-eN-amD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hkt-hb-KvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="DmS-AJ-IeO" userLabel="Jeux 2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YAO-Tr-Y84">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -253,6 +252,7 @@
                         <viewLayoutGuide key="safeArea" id="Mnj-D0-oNI"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hkt-hb-KvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1352.8" y="658.92053973013503"/>
         </scene>
@@ -261,7 +261,7 @@
         <image name="Unknown" width="94" height="133"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dnE-m0-cP8"/>
-        <segue reference="ecI-Ta-QXj"/>
+        <segue reference="0Wx-Kf-Jho"/>
+        <segue reference="HFB-ko-7wl"/>
     </inferredMetricsTieBreakers>
 </document>
