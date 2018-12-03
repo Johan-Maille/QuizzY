@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D6D26C721B56500000DFD8A /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6D26C621B56500000DFD8A /* QuestionManager.swift */; };
 		4DC0947021B537570022BBEF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC0946F21B537570022BBEF /* Question.swift */; };
 		4DC0947221B53A770022BBEF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC0947121B53A770022BBEF /* Game.swift */; };
 		D8BFF78A21B50F0F00BCC2D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BFF78921B50F0F00BCC2D3 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D6D26C621B56500000DFD8A /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		4DC0946F21B537570022BBEF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		4DC0947121B53A770022BBEF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D8BFF78621B50F0F00BCC2D3 /* QuizzY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizzY.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,8 +60,8 @@
 		D8BFF78821B50F0F00BCC2D3 /* QuizzY */ = {
 			isa = PBXGroup;
 			children = (
-				D8BFF79B21B50F6200BCC2D3 /* Controller */,
 				D8BFF79D21B50F6800BCC2D3 /* Model */,
+				D8BFF79B21B50F6200BCC2D3 /* Controller */,
 				D8BFF79C21B50F6500BCC2D3 /* View */,
 				D8BFF79E21B50F8E00BCC2D3 /* Supporting Files */,
 			);
@@ -87,6 +89,7 @@
 			children = (
 				4DC0946F21B537570022BBEF /* Question.swift */,
 				4DC0947121B53A770022BBEF /* Game.swift */,
+				4D6D26C621B56500000DFD8A /* QuestionManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				D8BFF78C21B50F0F00BCC2D3 /* MainMenu.swift in Sources */,
 				D8BFF78A21B50F0F00BCC2D3 /* AppDelegate.swift in Sources */,
 				4DC0947021B537570022BBEF /* Question.swift in Sources */,
+				4D6D26C721B56500000DFD8A /* QuestionManager.swift in Sources */,
 				4DC0947221B53A770022BBEF /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

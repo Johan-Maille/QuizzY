@@ -1,0 +1,24 @@
+{
+  "monuments" : [
+    {
+      	"name" : "statue de la liberte",
+    	"imageName" : "statue liberte"
+    },
+    {
+      	"name" : "tour eiffel",
+    	"imageName" : "tour eiffel"
+    },
+    {
+      	"name" : "arc de triomphe",
+    	"imageName" : "arc triomphe"
+    },
+    {
+      	"name" : "bigben",
+    	"imageName" : "bigben"
+    },
+    {
+      	"name" : "pyramide",
+    	"imageName" : "pyramide"
+    }
+  ]
+}
