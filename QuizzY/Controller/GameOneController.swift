@@ -13,10 +13,13 @@ class GameOneController: UIViewController {
    
     var game: Game? = nil
     
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet var answers: [UIButton]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        print(game!.toString())
+        
     }
     
     override func didReceiveMemoryWarning() {

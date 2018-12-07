@@ -139,7 +139,8 @@
                         <viewLayoutGuide key="safeArea" id="dLL-E0-NRM"/>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="VVi-Nb-8H0" id="vxQ-gI-xTD"/>
+                        <outlet property="image" destination="rzj-63-qMS" id="YQ1-YR-toq"/>
+                        <outletCollection property="answers" destination="lC0-Lq-Dem" collectionClass="NSMutableArray" id="4sw-Bh-hXQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BX4-3w-94x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,22 +248,22 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlW-rx-WTD">
-                                <rect key="frame" x="67" y="369" width="94" height="133"/>
+                                <rect key="frame" x="99" y="419" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="statue liberte"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DY-Ya-kXZ">
-                                <rect key="frame" x="222" y="368" width="94" height="133"/>
+                                <rect key="frame" x="254" y="418" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="statue liberte"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lg-HG-eyW">
-                                <rect key="frame" x="67" y="510" width="94" height="133"/>
+                                <rect key="frame" x="99" y="560" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="statue liberte"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77h-vr-UUV">
-                                <rect key="frame" x="222" y="514" width="94" height="133"/>
+                                <rect key="frame" x="254" y="564" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="statue liberte"/>
                             </button>
