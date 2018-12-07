@@ -129,7 +129,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Unknown" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-63-qMS" userLabel="GameImage">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-63-qMS" userLabel="GameImage">
                                 <rect key="frame" x="51" y="108" width="273" height="254"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -137,6 +137,10 @@
                         <color key="backgroundColor" red="0.49803921568627452" green="0.60392156862745094" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dLL-E0-NRM"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="rzj-63-qMS" id="YQ1-YR-toq"/>
+                        <outletCollection property="answers" destination="lC0-Lq-Dem" collectionClass="NSMutableArray" id="4sw-Bh-hXQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BX4-3w-94x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,24 +247,20 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlW-rx-WTD">
-                                <rect key="frame" x="67" y="369" width="94" height="133"/>
+                                <rect key="frame" x="99" y="419" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Unknown"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DY-Ya-kXZ">
-                                <rect key="frame" x="222" y="368" width="94" height="133"/>
+                                <rect key="frame" x="254" y="418" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Unknown"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lg-HG-eyW">
-                                <rect key="frame" x="67" y="510" width="94" height="133"/>
+                                <rect key="frame" x="99" y="560" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Unknown"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77h-vr-UUV">
-                                <rect key="frame" x="222" y="514" width="94" height="133"/>
+                                <rect key="frame" x="254" y="564" width="30" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Unknown"/>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="xu4-r5-L0X">
                                 <rect key="frame" x="169" y="481" width="37" height="37"/>
@@ -276,9 +276,6 @@
             <point key="canvasLocation" x="1352.8" y="658.92053973013503"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Unknown" width="94" height="133"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ek4-Rw-jZD"/>
         <segue reference="Xse-fA-Dg4"/>
