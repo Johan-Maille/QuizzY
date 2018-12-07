@@ -8,10 +8,8 @@
 
 import UIKit
 
-class MainMenu: UIViewController {
+class MainMenuController: UIViewController {
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,21 +21,13 @@ class MainMenu: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let chooseDifficulty = segue.destination as? ChooseDifficulty {
-            let game = Game()
+        if let chooseDifficulty = segue.destination as? DifficultyController {
+            // let game = Game()
+            // let jeu: String =
             
-//            switch segue.identifier {
-//                case "jeu1":
-//                    game.gameMod = .text
-//
-//            case .none:
-//                <#code#>
-//            case .some(_):
-//                <#code#>
-//            }
+            // game.chooseGameMod(jeu: jeu)
             
-            
-            chooseDifficulty.game = game
+            chooseDifficulty.gameMod = segue.identifier!
         }
     }
     
