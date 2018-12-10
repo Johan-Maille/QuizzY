@@ -81,12 +81,6 @@
                                     <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="Xlk-iR-WrZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJR-2m-vCM">
-                                <rect key="frame" x="199" y="453" width="114" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.22880911723253242" green="0.75483518838882446" blue="0.1744026683486769" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Réponse 2"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSj-LR-8ec">
                                 <rect key="frame" x="62" y="552" width="114" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
