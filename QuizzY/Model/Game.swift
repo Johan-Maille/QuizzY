@@ -22,7 +22,7 @@ class Game {
     }
     
     private var currentIndex: Int = 0
-    var state: State = .over
+    var state: State = .ongoing
     var gameMod: Mod = .text
     var score: Int = 0
     var questions: [Question] = []
@@ -67,7 +67,7 @@ class Game {
         }
         
         if questionIsDone {
-            if currentIndex > questionCount {
+            if currentIndex >= questionCount-1 {
                 state = .over
             } else {
                 currentIndex += 1

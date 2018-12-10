@@ -9,8 +9,8 @@
 import UIKit
 
 class GameOneController: UIViewController {
-     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
    
+    var timer = Timer()
     var game: Game? = nil
     var questions: [Question] = [Question(imagePath: "statue liberte", name: "Statue de la Liberté"),
                                  Question(imagePath: "tour eiffel", name: "Tour Eiffel"),
@@ -40,6 +40,7 @@ class GameOneController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        toggleEnableAnswers()
         startGame()
     }
     
@@ -50,9 +51,20 @@ class GameOneController: UIViewController {
     
     @IBAction func didChooseAnswer(_ sender: Any) {
         if let clickedButton = sender as? UIButton {
+            toggleEnableAnswers()
+            set(index: findButton(titleButton: game!.currentQuestion.name))
             game!.answer(with: clickedButton.title(for: .normal)!)
             scoreLabel.text = "\(game!.score) / \(game!.questions.count)"
-            loadQuestion()
+            if game!.state == .ongoing {
+                timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.loadQuestion), userInfo: nil, repeats: false)
+            } else {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainMenu") as! MainMenuController
+                
+                self.present(nextViewController, animated: true, completion: nil)
+            }
+            
+            //loadQuestion()
         }
     }
     
@@ -62,10 +74,26 @@ class GameOneController: UIViewController {
         }
     }
     
+    func toggleEnableAnswers() {
+        for answer in answers {
+            answer.isEnabled = !answer.isEnabled
+        }
+    }
+    
     func setLabelAnswers(arrAnswer: [String]) {
         for (index, answer) in answers.enumerated() {
             answer.setTitle(arrAnswer[index], for: .normal)
         }
+    }
+    
+    private func findButton(titleButton: String) -> Int {
+        for (index, button) in answers.enumerated() {
+            if button.title(for: .normal) == titleButton {
+                return index
+            }
+        }
+        
+        return -1
     }
     
     private func startGame() {
@@ -80,7 +108,9 @@ class GameOneController: UIViewController {
         loader.isHidden = true
     }
     
-    private func loadQuestion() {
+    @objc private func loadQuestion() {
+        defautcolor()
+        toggleEnableAnswers()
         scoreLabel.text = "\(game!.score) / \(game!.questions.count)"
         image.image = UIImage(named: game!.currentQuestion.imagePath)
         viewTitle.title = "Question N°"+game!.indexQuestion()
