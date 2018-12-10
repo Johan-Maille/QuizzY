@@ -27,11 +27,14 @@ class Game {
     var score: Int = 0
     var questions: [Question] = []
     var percentage: Float = 1.0
-    var questionCount: Int = 0
     var difficult: Difficulty = .easy
     
     var currentQuestion: Question {
         return questions[currentIndex]
+    }
+    
+    var questionCount: Int {
+        return questions.count
     }
     
     func indexQuestion() -> String {
@@ -39,7 +42,7 @@ class Game {
         return String(index)
     }
     
-    func answerText(with answer: String) {
+    func answer(with answer: String) {
         var questionIsDone: Bool = false
         
         switch gameMod {
@@ -48,7 +51,8 @@ class Game {
                     score += 1
                 }
             
-                questionIsDone = (percentage >= 80)
+                questionIsDone = true
+                //questionIsDone = (percentage >= 80)
             
             case .pictures:
                 if answer == currentQuestion.imagePath {
@@ -103,6 +107,53 @@ class Game {
                 print("Error : unknown difficult")
             
         }
+    }
+    
+    func getAnswersList() -> [String] {
+        var arrAnswers: [String: Bool] = [:]
+        var res: [String] = []
+        
+        arrAnswers[currentQuestion.name] = true
+        
+        while arrAnswers.count < 4 {
+            let rand = randomInt(min: 0, max: questions.count-1)
+            if arrAnswers[questions[rand].name] == nil {
+                arrAnswers[questions[rand].name] = true
+            }
+        }
+        
+        for answer in arrAnswers {
+            res.append(answer.key)
+        }
+        
+        return res
+    }
+    
+    func randomArr() {
+        var arrIndex: [Int: Int] = [:]
+        var arrRes: [Question] = []
+        
+        for i in 0...questions.count-1 {
+            arrIndex[i] = i
+        }
+        
+        while arrIndex.count > 1 {
+            let rand = randomInt(min: 0, max: questions.count-1)
+            if arrIndex[rand] != nil {
+                arrRes.append(questions[rand])
+                arrIndex.removeValue(forKey: rand)
+            }
+        }
+        
+        for index in arrIndex {
+            arrRes.append(questions[index.key])
+        }
+        
+        questions = arrRes
+    }
+    
+    private func randomInt(min: Int, max: Int) -> Int {
+        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
     
     func toString() -> String {
