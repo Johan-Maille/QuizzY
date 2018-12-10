@@ -211,11 +211,8 @@
         <!--Jeux 2-->
         <scene sceneID="NYw-eN-amD">
             <objects>
-<<<<<<< Updated upstream
+
                 <viewController storyboardIdentifier="GameTwo" id="DmS-AJ-IeO" userLabel="Jeux 2" customClass="GameTwoController" customModule="QuizzY" customModuleProvider="target" sceneMemberID="viewController">
-=======
-                <viewController id="DmS-AJ-IeO" userLabel="Jeux 2" sceneMemberID="viewController">
->>>>>>> Stashed changes
                     <view key="view" contentMode="scaleToFill" id="YAO-Tr-Y84">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
