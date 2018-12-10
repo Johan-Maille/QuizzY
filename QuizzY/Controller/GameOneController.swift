@@ -9,7 +9,8 @@
 import UIKit
 
 class GameOneController: UIViewController {
-    
+     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+   
     var game: Game? = nil
     
     override func viewDidLoad() {

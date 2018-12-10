@@ -81,13 +81,13 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSj-LR-8ec">
                                 <rect key="frame" x="62" y="552" width="114" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.8980392157" green="0.54901960780000003" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Kremlin"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1P-tM-Yam">
                                 <rect key="frame" x="199" y="552" width="114" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.81176470590000005" green="0.91764705879999997" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Statue de la Libérté"/>
                             </button>
@@ -138,6 +138,9 @@
                         <color key="backgroundColor" red="0.49803921568627452" green="0.60392156862745094" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dLL-E0-NRM"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="VVi-Nb-8H0" id="vxQ-gI-xTD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BX4-3w-94x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
