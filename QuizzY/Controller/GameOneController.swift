@@ -27,6 +27,7 @@ class GameOneController: UIViewController {
     func defautcolor(){
         for button in answers{
             button.backgroundColor = UIColor(red: 191.0/255.0, green: 196.0/255.0, blue: 201.0/255.0, alpha: 1) // Gris
+            button.setTitleColor( UIColor.gray,for: UIControlState.disabled)
         }
     }
    
@@ -81,11 +82,7 @@ class GameOneController: UIViewController {
         }
     }
     
-    func toggleEnableAnswers() {
-        for answer in answers {
-            answer.isEnabled = !answer.isEnabled
-        }
-    }
+   
     
     func setLabelAnswers(arrAnswer: [String]) {
         for (index, answer) in answers.enumerated() {
