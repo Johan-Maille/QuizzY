@@ -9,7 +9,7 @@
 import UIKit
 
 class GameOneController: UIViewController {
-     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
    
     var game: Game? = nil
     
@@ -18,7 +18,20 @@ class GameOneController: UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet var answers: [UIButton]!
     @IBOutlet weak var viewTitle: UINavigationItem!
+ 
     
+    func defautcolor(){
+        for button in answers{
+            button.backgroundColor = UIColor(red: 191.0/255.0, green: 196.0/255.0, blue: 201.0/255.0, alpha: 1) // Gris
+        }
+    }
+   
+    func set(index:Int){
+        for button in answers{
+            button.backgroundColor = UIColor(red: 243.0/255.0, green: 135.0/255.0, blue: 148.0/255.0, alpha: 1) // Rouge
+        }
+        answers[index].backgroundColor = UIColor(red: 200.0/255.0, green: 236.0/255.0, blue: 160.0/255.0, alpha: 1) // Vert
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +62,7 @@ class GameOneController: UIViewController {
         
         image.image = UIImage(named: game!.currentQuestion.imagePath)
         viewTitle.title = "Question N°"+game!.indexQuestion()
-        
+        answers[1].style = .standard
         //game.refresh()
     }
     
