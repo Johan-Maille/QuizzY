@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -86,18 +86,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.22880911723253242" green="0.75483518838882446" blue="0.1744026683486769" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Réponse 2"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="Xlk-iR-WrZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSj-LR-8ec">
                                 <rect key="frame" x="62" y="552" width="114" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.25160780964915691" green="0.75483518838882446" blue="0.2779171472070377" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Réponse 3"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="2RP-CK-5dH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1P-tM-Yam">
                                 <rect key="frame" x="199" y="552" width="114" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.46601353049937599" green="0.75483518838882446" blue="0.55452721760810231" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Réponse 4"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="d7T-sl-bbt"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-MT-0V0">
                                 <rect key="frame" x="16" y="38" width="343" height="44"/>
@@ -139,7 +148,13 @@
                     </view>
                     <connections>
                         <outlet property="image" destination="rzj-63-qMS" id="YQ1-YR-toq"/>
+                        <outlet property="labelGoodAnswer" destination="mT7-t3-Gtv" id="ZvZ-zo-NyX"/>
+                        <outlet property="loader" destination="VVi-Nb-8H0" id="VAX-U7-Reh"/>
+                        <outlet property="viewTitle" destination="b5Q-TN-SXN" id="pfU-CS-zcm"/>
                         <outletCollection property="answers" destination="lC0-Lq-Dem" collectionClass="NSMutableArray" id="4sw-Bh-hXQ"/>
+                        <outletCollection property="answers" destination="QJR-2m-vCM" collectionClass="NSMutableArray" id="Eyq-Bo-7wa"/>
+                        <outletCollection property="answers" destination="JSj-LR-8ec" collectionClass="NSMutableArray" id="gMy-zz-yij"/>
+                        <outletCollection property="answers" destination="Y1P-tM-Yam" collectionClass="NSMutableArray" id="jlY-bl-dHn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BX4-3w-94x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -215,7 +230,6 @@
         <!--Jeux 2-->
         <scene sceneID="NYw-eN-amD">
             <objects>
-
                 <viewController storyboardIdentifier="GameTwo" id="DmS-AJ-IeO" userLabel="Jeux 2" customClass="GameTwoController" customModule="QuizzY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YAO-Tr-Y84">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>

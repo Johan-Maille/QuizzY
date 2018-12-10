@@ -9,6 +9,6 @@
 import Foundation
 
 struct Question: Decodable {
-    var imageName: String = "Loading"
+    var imagePath: String = "Loading"
     var name: String = "Loading"
 }

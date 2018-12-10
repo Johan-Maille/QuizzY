@@ -34,6 +34,11 @@ class Game {
         return questions[currentIndex]
     }
     
+    func indexQuestion() -> String {
+        let index = currentIndex+1
+        return String(index)
+    }
+    
     func answerText(with answer: String) {
         var questionIsDone: Bool = false
         
@@ -46,7 +51,7 @@ class Game {
                 questionIsDone = (percentage >= 80)
             
             case .pictures:
-                if answer == currentQuestion.imageName {
+                if answer == currentQuestion.imagePath {
                     score += 1
                 }
                 
