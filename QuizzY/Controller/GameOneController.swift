@@ -62,13 +62,13 @@ class GameOneController: UIViewController {
         
         image.image = UIImage(named: game!.currentQuestion.imagePath)
         viewTitle.title = "Question N°"+game!.indexQuestion()
-        answers[1].style = .standard
+        
         //game.refresh()
     }
     
     @objc func questionLoaded() {
-        activityIndicator.isHidden = true
-        newGameButton.isHidden = false
-        questionView.title = game.currentQuestion.title
+        loader.isHidden = true
+//        newGameButton.isHidden = false
+//        question.title = game.currentQuestion.title
     }
 }
