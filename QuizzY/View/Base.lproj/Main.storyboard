@@ -77,12 +77,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Taj Mahal"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="Xlk-iR-WrZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSj-LR-8ec">
                                 <rect key="frame" x="62" y="552" width="114" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Kremlin"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="2RP-CK-5dH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1P-tM-Yam">
                                 <rect key="frame" x="199" y="552" width="114" height="63"/>
@@ -90,6 +96,9 @@
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <state key="normal" title="Statue de la Libérté"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="d7T-sl-bbt"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-MT-0V0">
                                 <rect key="frame" x="16" y="38" width="343" height="44"/>
@@ -140,7 +149,13 @@
                     </view>
                     <connections>
                         <outlet property="image" destination="rzj-63-qMS" id="YQ1-YR-toq"/>
+                        <outlet property="labelGoodAnswer" destination="mT7-t3-Gtv" id="ZvZ-zo-NyX"/>
+                        <outlet property="loader" destination="VVi-Nb-8H0" id="VAX-U7-Reh"/>
+                        <outlet property="viewTitle" destination="b5Q-TN-SXN" id="pfU-CS-zcm"/>
                         <outletCollection property="answers" destination="lC0-Lq-Dem" collectionClass="NSMutableArray" id="4sw-Bh-hXQ"/>
+                        <outletCollection property="answers" destination="QJR-2m-vCM" collectionClass="NSMutableArray" id="Eyq-Bo-7wa"/>
+                        <outletCollection property="answers" destination="JSj-LR-8ec" collectionClass="NSMutableArray" id="gMy-zz-yij"/>
+                        <outletCollection property="answers" destination="Y1P-tM-Yam" collectionClass="NSMutableArray" id="jlY-bl-dHn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BX4-3w-94x" userLabel="First Responder" sceneMemberID="firstResponder"/>
