@@ -35,6 +35,8 @@ class GameOneController: UIViewController {
             button.backgroundColor = UIColor(red: 243.0/255.0, green: 135.0/255.0, blue: 148.0/255.0, alpha: 1) // Rouge
         }
         answers[index].backgroundColor = UIColor(red: 200.0/255.0, green: 236.0/255.0, blue: 160.0/255.0, alpha: 1) // Vert
+        answers[index].setTitleColor( UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1),for: UIControlState.disabled)
+        
     }
     
     override func viewDidLoad() {
@@ -71,6 +73,11 @@ class GameOneController: UIViewController {
     func toggleHideAnswers() {
         for answer in answers {
             answer.isHidden = !answer.isHidden
+        }
+    }
+    func toggleEnableAnswers() {
+        for answer in answers {
+            answer.isEnabled = !answer.isEnabled
         }
     }
     
@@ -115,6 +122,7 @@ class GameOneController: UIViewController {
         image.image = UIImage(named: game!.currentQuestion.imagePath)
         viewTitle.title = "Question N°"+game!.indexQuestion()
         setLabelAnswers(arrAnswer: game!.getAnswersList())
+        defautcolor()
     }
     
     @objc func questionLoaded() {

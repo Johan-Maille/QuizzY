@@ -30,6 +30,7 @@ class Game {
     var difficult: Difficulty = .easy
     
     var currentQuestion: Question {
+        
         return questions[currentIndex]
     }
     
