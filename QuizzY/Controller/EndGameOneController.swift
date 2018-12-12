@@ -25,7 +25,7 @@ class EndGameOneController: UIViewController {
     @IBAction func didReplay(_ sender: UIButton) {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        game!.restart()
+        game!.start()
         
         switch game!.gameMod {
             case .text:

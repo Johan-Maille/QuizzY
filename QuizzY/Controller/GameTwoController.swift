@@ -30,6 +30,8 @@ class GameTwoController: UIViewController {
         var functionSelector: Selector
         toggleEnableAnswers()
         
+        goodImage.isHidden = false
+        goodImage.image = UIImage(named: game!.currentQuestion.imagePath)
         game!.answer(with: sender.accessibilityIdentifier!)
         scoreLabel.text = "\(game!.score) / \(game!.questions.count)"
         if game!.state == .ongoing {
@@ -74,8 +76,7 @@ class GameTwoController: UIViewController {
 //        loader.isHidden = false
         toggleHideAnswers()
         
-        game!.questions = QuestionManager.shared.questions
-        game!.randomize()
+        game!.start()
         loadQuestion()
         
         toggleHideAnswers()
@@ -84,6 +85,7 @@ class GameTwoController: UIViewController {
     
     @objc private func loadQuestion() {
         toggleEnableAnswers()
+        goodImage.isHidden = true
         scoreLabel.text = "\(game!.score) / \(game!.questions.count)"
         questionLabel.text = game!.currentQuestion.name
         viewTitle.title = "Question N°"+game!.indexQuestion()

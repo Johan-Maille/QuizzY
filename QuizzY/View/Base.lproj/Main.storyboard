@@ -126,10 +126,6 @@
                                 <rect key="frame" x="168" y="532" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="statue liberte" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-63-qMS" userLabel="GameImage">
-                                <rect key="frame" x="50" y="177" width="273" height="254"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lC0-Lq-Dem">
                                 <rect key="frame" x="29" y="471" width="147" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -140,13 +136,17 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0O-1f-2qN">
-                                <rect key="frame" x="16" y="98" width="42" height="21"/>
+                                <rect key="frame" x="50" y="107" width="75" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="scoreLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="statue liberte" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-63-qMS" userLabel="GameImage">
+                                <rect key="frame" x="51" y="150" width="273" height="254"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.49803921568627452" green="0.60392156862745094" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dLL-E0-NRM"/>
@@ -303,7 +303,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccV-Vm-V0d">
-                                <rect key="frame" x="38" y="103" width="42" height="21"/>
+                                <rect key="frame" x="38" y="103" width="91" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="scoreLabel"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -379,10 +379,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="statue liberte" width="94" height="133"/>
+        <image name="statue liberte" width="94.5" height="133.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ek4-Rw-jZD"/>
-        <segue reference="ecI-Ta-QXj"/>
+        <segue reference="Xse-fA-Dg4"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -31,6 +31,17 @@ class GameOneController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func startGame() {
+        loader.isHidden = false
+        toggleHideAnswers()
+        
+        game!.start()
+        loadQuestion()
+        
+        toggleHideAnswers()
+        loader.isHidden = true
+    }
+    
     func defautcolor(){
         for button in answers{
             button.backgroundColor = UIColor(red: 191.0/255.0, green: 196.0/255.0, blue: 201.0/255.0, alpha: 1) // Gris
@@ -90,18 +101,6 @@ class GameOneController: UIViewController {
         }
         
         return -1
-    }
-    
-    private func startGame() {
-        loader.isHidden = false
-        toggleHideAnswers()
-        
-        game!.questions = QuestionManager.shared.questions
-        game!.randomize()
-        loadQuestion()
-        
-        toggleHideAnswers()
-        loader.isHidden = true
     }
     
     @objc private func loadQuestion() {

@@ -8,52 +8,63 @@
 
 import Foundation
 
+// Classe qui permet de gérer le jeu
 class Game {
+    
+    // Etats possible du jeu
     enum State {
         case ongoing, over
     }
     
+    // Modes de jeu
     enum Mod {
         case text, pictures, random
     }
     
+    // Difficulté possible du jeu
     enum Difficulty {
         case easy, medium, hard
     }
     
-    private var currentIndex: Int = 0
-    var state: State = .ongoing
-    var gameMod: Mod = .text
-    var score: Int = 0
-    var questions: [Question] = []
-    var percentage: Float = 1.0
-    var difficult: Difficulty = .easy
+    private var currentIndex: Int = 0 // Indice courant
+    var state: State = .ongoing // Etat courant
+    var gameMod: Mod = .text // Mode courant
+    var score: Int = 0 // Le score du joueur
+    var questions: [Question] = [] // Les questions
+    var percentage: Float = 1.0 // Pourcentage normalement utilsé pour le zoom du jeu 1
+    var difficult: Difficulty = .easy // Difficulté courante
+    var questionCount: Int = 5 // Nombre de question prévu
     
+    // La question actuelle
     var currentQuestion: Question {
         return questions[currentIndex]
     }
     
-    var questionCount: Int {
-        return questions.count
-    }
-    
+    // Le pourcentage de réussite de la partie
     var questionPercentage: Float {
         return Float(score / questionCount)
     }
     
-    func restart() {
+    // Fonction qui initialise pour le début de partie
+    func start() {
         self.currentIndex = 0
         self.score = 0
-        self.questions = QuestionManager.shared.questions
-        self.randomize()
+        setQuestion()
         self.state = .ongoing
     }
     
+    // Renvoi l'indice de la question courante
     func indexQuestion() -> String {
         let index = currentIndex+1
         return String(index)
     }
     
+    // Remplie les questions
+    func setQuestion() {
+        self.questions = QuestionManager.shared.get(questionCount: questionCount)
+    }
+    
+    // Fonction de réponse à la question
     func answer(with answer: String) {
         var questionIsDone: Bool = false
         
@@ -87,6 +98,7 @@ class Game {
         }
     }
     
+    // Change le mode de jeu
     func setGameMod(jeu: String) {
         switch jeu {
             case "game1":
@@ -104,16 +116,20 @@ class Game {
         }
     }
     
+    // Change la difficulté
     func setDifficult(difficulty: String) {
         switch difficulty {
             case "easy":
                 self.difficult = .easy
+                self.questionCount = 5
             
             case "medium":
                 self.difficult = .medium
+                self.questionCount = 10
             
             case "hard":
                 self.difficult = .hard
+                self.questionCount = 15
             
             default:
                 print("Error : unknown difficult")
@@ -121,6 +137,7 @@ class Game {
         }
     }
     
+    // Renvoie les propositions de réponses
     func getAnswersList() -> [String] {
         var arrAnswers: [String: Bool] = [:]
         var res: [String] = []
@@ -129,7 +146,7 @@ class Game {
             arrAnswers[currentQuestion.name] = true
             
             while arrAnswers.count < 4 {
-                let rand = randomInt(min: 0, max: questions.count-1)
+                let rand = QuestionManager.shared.randomInt(min: 0, max: questions.count-1)
                 if arrAnswers[questions[rand].name] == nil {
                     arrAnswers[questions[rand].name] = true
                 }
@@ -138,7 +155,7 @@ class Game {
             arrAnswers[currentQuestion.imagePath] = true
             
             while arrAnswers.count < 4 {
-                let rand = randomInt(min: 0, max: questions.count-1)
+                let rand = QuestionManager.shared.randomInt(min: 0, max: questions.count-1)
                 if arrAnswers[questions[rand].imagePath] == nil {
                     arrAnswers[questions[rand].imagePath] = true
                 }
@@ -150,33 +167,6 @@ class Game {
         }
         
         return res
-    }
-    
-    func randomize() {
-        var arrIndex: [Int: Int] = [:]
-        var arrRes: [Question] = []
-        
-        for i in 0...questions.count-1 {
-            arrIndex[i] = i
-        }
-        
-        while arrIndex.count > 1 {
-            let rand = randomInt(min: 0, max: questions.count-1)
-            if arrIndex[rand] != nil {
-                arrRes.append(questions[rand])
-                arrIndex.removeValue(forKey: rand)
-            }
-        }
-        
-        for index in arrIndex {
-            arrRes.append(questions[index.key])
-        }
-        
-        questions = arrRes
-    }
-    
-    private func randomInt(min: Int, max: Int) -> Int {
-        return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
     
     func toString() -> String {
