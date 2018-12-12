@@ -8,7 +8,8 @@
 
 import Foundation
 
+// Structure représentant les questions posées
 struct Question: Decodable {
-    var imageName: String = "Loading"
-    var name: String = "Loading"
+    var imagePath: String = "Loading" // Le chemin de l'image de la question à afficher (image du monument ici)
+    var name: String = "Loading" // Le nom de la question qui sera affiché (nom du monument)
 }

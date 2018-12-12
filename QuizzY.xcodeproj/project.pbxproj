@@ -14,7 +14,7 @@
 		4D6D26C721B56500000DFD8A /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6D26C621B56500000DFD8A /* QuestionManager.swift */; };
 		4DC0947021B537570022BBEF /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC0946F21B537570022BBEF /* Question.swift */; };
 		4DC0947221B53A770022BBEF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC0947121B53A770022BBEF /* Game.swift */; };
-		D8467EC621BE51760086DD31 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8467EC521BE51760086DD31 /* QuestionView.swift */; };
+		4DF7222421C1158800205504 /* EndGameOneController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF7222321C1158800205504 /* EndGameOneController.swift */; };
 		D8BFF78A21B50F0F00BCC2D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8BFF78921B50F0F00BCC2D3 /* AppDelegate.swift */; };
 		D8BFF78F21B50F0F00BCC2D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8BFF78D21B50F0F00BCC2D3 /* Main.storyboard */; };
 		D8BFF79121B50F0F00BCC2D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8BFF79021B50F0F00BCC2D3 /* Assets.xcassets */; };
@@ -29,7 +29,7 @@
 		4D6D26C621B56500000DFD8A /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		4DC0946F21B537570022BBEF /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		4DC0947121B53A770022BBEF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		D8467EC521BE51760086DD31 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		4DF7222321C1158800205504 /* EndGameOneController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameOneController.swift; sourceTree = "<group>"; };
 		D8BFF78621B50F0F00BCC2D3 /* QuizzY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizzY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8BFF78921B50F0F00BCC2D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8BFF78E21B50F0F00BCC2D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -83,6 +83,7 @@
 				4D3AC5EA21BA78D10098AB25 /* MainMenu.swift */,
 				4D3AC5E121BA706C0098AB25 /* GameOneController.swift */,
 				4D3AC5E721BA77E60098AB25 /* GameTwoController.swift */,
+				4DF7222321C1158800205504 /* EndGameOneController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -91,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				D8BFF78D21B50F0F00BCC2D3 /* Main.storyboard */,
-				D8467EC521BE51760086DD31 /* QuestionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,12 +190,12 @@
 			files = (
 				D8BFF78A21B50F0F00BCC2D3 /* AppDelegate.swift in Sources */,
 				4D3AC5E821BA77E60098AB25 /* GameTwoController.swift in Sources */,
+				4DF7222421C1158800205504 /* EndGameOneController.swift in Sources */,
 				4DC0947021B537570022BBEF /* Question.swift in Sources */,
 				4D3AC5EC21BA78D10098AB25 /* MainMenu.swift in Sources */,
 				4D3AC5E221BA706C0098AB25 /* GameOneController.swift in Sources */,
 				4D6D26C721B56500000DFD8A /* QuestionManager.swift in Sources */,
 				4D3AC5EB21BA78D10098AB25 /* ChooseDifficulty.swift in Sources */,
-				D8467EC621BE51760086DD31 /* QuestionView.swift in Sources */,
 				4DC0947221B53A770022BBEF /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

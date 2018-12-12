@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--Page Principale-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="MainMenu" id="BYZ-38-t0r" userLabel="Page Principale" customClass="MainMenuController" customModule="QuizzY" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainMenu" title="MainMenu" id="BYZ-38-t0r" userLabel="Page Principale" customClass="MainMenuController" customModule="QuizzY" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,12 +48,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMx-m4-U8M">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMx-m4-U8M">
                                 <rect key="frame" x="16" y="498" width="343" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="30"/>
-                                <state key="normal" title="Jeux 3"/>
+                                <state key="normal" title="Jeux 3 (Incoming)"/>
+                                <state key="disabled">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.4971812685316277" green="0.59893839420033701" blue="0.78275328874588013" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -73,23 +76,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJR-2m-vCM">
-                                <rect key="frame" x="199" y="455" width="114" height="63"/>
+                                <rect key="frame" x="198" y="471" width="153" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Taj Mahal"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="Xlk-iR-WrZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSj-LR-8ec">
-                                <rect key="frame" x="62" y="552" width="114" height="63"/>
+                                <rect key="frame" x="29" y="568" width="147" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Kremlin"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="2RP-CK-5dH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y1P-tM-Yam">
-                                <rect key="frame" x="199" y="552" width="114" height="63"/>
+                                <rect key="frame" x="198" y="568" width="153" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Statue de la Libérté"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="d7T-sl-bbt"/>
+                                </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hBQ-MT-0V0">
                                 <rect key="frame" x="16" y="38" width="343" height="44"/>
@@ -111,22 +123,11 @@
                                 </items>
                             </navigationBar>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="VVi-Nb-8H0">
-                                <rect key="frame" x="169" y="516" width="37" height="37"/>
+                                <rect key="frame" x="168" y="532" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="La bonne réponse était" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mT7-t3-Gtv">
-                                <rect key="frame" x="27" y="383" width="320" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="statue liberte" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-63-qMS" userLabel="GameImage">
-                                <rect key="frame" x="51" y="108" width="273" height="254"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lC0-Lq-Dem">
-                                <rect key="frame" x="62" y="455" width="114" height="63"/>
+                                <rect key="frame" x="29" y="471" width="147" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Tour Eiffel"/>
@@ -134,12 +135,31 @@
                                     <action selector="didChooseAnswer:" destination="ftQ-ja-UxQ" eventType="touchUpInside" id="QlC-JR-A80"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0O-1f-2qN">
+                                <rect key="frame" x="50" y="107" width="75" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="scoreLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="statue liberte" translatesAutoresizingMaskIntoConstraints="NO" id="rzj-63-qMS" userLabel="GameImage">
+                                <rect key="frame" x="51" y="150" width="273" height="254"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.49803921568627452" green="0.60392156862745094" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dLL-E0-NRM"/>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="VVi-Nb-8H0" id="vxQ-gI-xTD"/>
+                        <outlet property="image" destination="rzj-63-qMS" id="YQ1-YR-toq"/>
+                        <outlet property="loader" destination="VVi-Nb-8H0" id="VAX-U7-Reh"/>
+                        <outlet property="scoreLabel" destination="y0O-1f-2qN" id="ZX1-hQ-Yg6"/>
+                        <outlet property="viewTitle" destination="b5Q-TN-SXN" id="pfU-CS-zcm"/>
+                        <outletCollection property="answers" destination="lC0-Lq-Dem" collectionClass="NSMutableArray" id="4sw-Bh-hXQ"/>
+                        <outletCollection property="answers" destination="QJR-2m-vCM" collectionClass="NSMutableArray" id="Eyq-Bo-7wa"/>
+                        <outletCollection property="answers" destination="JSj-LR-8ec" collectionClass="NSMutableArray" id="gMy-zz-yij"/>
+                        <outletCollection property="answers" destination="Y1P-tM-Yam" collectionClass="NSMutableArray" id="jlY-bl-dHn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BX4-3w-94x" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -157,7 +177,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGc-jx-OWw">
                                 <rect key="frame" x="78" y="161" width="219" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.8980392157" green="0.54901960780000003" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="easy"/>
                                 <state key="normal" title="Facile"/>
                                 <connections>
@@ -167,7 +187,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG5-XP-Qec">
                                 <rect key="frame" x="78" y="324" width="219" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.8980392157" green="0.54901960780000003" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="medium"/>
                                 <state key="normal" title="Moyen"/>
                                 <connections>
@@ -196,7 +216,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlc-HN-rt7">
                                 <rect key="frame" x="78" y="484" width="219" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.8980392157" green="0.54901960780000003" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="hard"/>
                                 <state key="normal" title="Difficile"/>
                                 <connections>
@@ -221,7 +241,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grande Statue présente au Etats-Unis. Qui suis-je ???" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SP-l8-Qi4">
-                                <rect key="frame" x="16" y="93" width="343" height="224"/>
+                                <rect key="frame" x="16" y="132" width="343" height="224"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Baskerville" family="Baskerville" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -247,41 +267,119 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlW-rx-WTD">
-                                <rect key="frame" x="67" y="369" width="94" height="133"/>
+                                <rect key="frame" x="38" y="376" width="119" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="statue liberte"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="DmS-AJ-IeO" eventType="touchUpInside" id="0uN-R3-Ddd"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DY-Ya-kXZ">
-                                <rect key="frame" x="222" y="368" width="94" height="133"/>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ag-Fx-Nab">
+                                <rect key="frame" x="16" y="141" width="343" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="statue liberte"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lg-HG-eyW">
-                                <rect key="frame" x="67" y="510" width="94" height="133"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="statue liberte"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77h-vr-UUV">
-                                <rect key="frame" x="222" y="514" width="94" height="133"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="statue liberte"/>
-                            </button>
+                            </imageView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="xu4-r5-L0X">
-                                <rect key="frame" x="169" y="481" width="37" height="37"/>
+                                <rect key="frame" x="169" y="492" width="37" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YNa-Fk-WfS">
+                                <rect key="frame" x="215" y="376" width="119" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="DmS-AJ-IeO" eventType="touchUpInside" id="RCK-4o-5nt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOr-In-Dog">
+                                <rect key="frame" x="38" y="528" width="119" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="DmS-AJ-IeO" eventType="touchUpInside" id="JcZ-gT-hxy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeZ-W1-Hcu">
+                                <rect key="frame" x="215" y="528" width="119" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didChooseAnswer:" destination="DmS-AJ-IeO" eventType="touchUpInside" id="2xV-cD-w6v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccV-Vm-V0d">
+                                <rect key="frame" x="38" y="103" width="91" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="scoreLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.51764705882352946" green="0.60392156862745094" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Mnj-D0-oNI"/>
                     </view>
+                    <connections>
+                        <outlet property="goodImage" destination="2ag-Fx-Nab" id="5AZ-du-D0h"/>
+                        <outlet property="questionLabel" destination="8SP-l8-Qi4" id="uU9-BS-LBl"/>
+                        <outlet property="scoreLabel" destination="ccV-Vm-V0d" id="jaf-3H-gSw"/>
+                        <outlet property="viewTitle" destination="Swy-4B-Au4" id="vtE-dD-So5"/>
+                        <outletCollection property="answers" destination="YNa-Fk-WfS" collectionClass="NSMutableArray" id="aqT-oY-ckP"/>
+                        <outletCollection property="answers" destination="mlW-rx-WTD" collectionClass="NSMutableArray" id="9gS-r1-geh"/>
+                        <outletCollection property="answers" destination="WOr-In-Dog" collectionClass="NSMutableArray" id="cBT-Ft-fKB"/>
+                        <outletCollection property="answers" destination="CeZ-W1-Hcu" collectionClass="NSMutableArray" id="8Um-uc-Nqn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hkt-hb-KvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="2732"/>
+            <point key="canvasLocation" x="36" y="2731.4842578710645"/>
+        </scene>
+        <!--End Jeux 1-->
+        <scene sceneID="dZr-gd-3f6">
+            <objects>
+                <viewController storyboardIdentifier="EndGameOne" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lxl-jF-Eqh" userLabel="End Jeux 1" customClass="EndGameOneController" customModule="QuizzY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cWs-uZ-rVV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aL1-Mu-1Uq">
+                                <rect key="frame" x="16" y="428" width="343" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.76862745099999996" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Rejouer"/>
+                                <connections>
+                                    <action selector="didReplay:" destination="Lxl-jF-Eqh" eventType="touchUpInside" id="HeA-D5-1DD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZN-k6-vqw">
+                                <rect key="frame" x="16" y="548" width="343" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73050922927461137" green="0.2035800155867899" blue="0.11820564840528758" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Retour au menu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" id="E0n-Kd-Cev"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHw-ov-aaK">
+                                <rect key="frame" x="16" y="35" width="343" height="232"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.81176470590000005" green="0.91764705879999997" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.4039215686" green="0.5568627451" blue="0.76470588240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="9e4-iP-Jev"/>
+                    </view>
+                    <connections>
+                        <outlet property="scoreLabel" destination="EHw-ov-aaK" id="YIs-EL-xpt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ock-aW-oTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783.20000000000005" y="2044.2278860569718"/>
         </scene>
     </scenes>
     <resources>
-        <image name="statue liberte" width="94" height="133"/>
+        <image name="statue liberte" width="94.5" height="133.5"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ek4-Rw-jZD"/>
