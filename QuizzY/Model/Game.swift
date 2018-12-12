@@ -30,12 +30,15 @@ class Game {
     var difficult: Difficulty = .easy
     
     var currentQuestion: Question {
-        
         return questions[currentIndex]
     }
     
     var questionCount: Int {
         return questions.count
+    }
+    
+    var questionPercentage: Float {
+        return Float(score / questionCount)
     }
     
     func restart() {
@@ -122,12 +125,23 @@ class Game {
         var arrAnswers: [String: Bool] = [:]
         var res: [String] = []
         
-        arrAnswers[currentQuestion.name] = true
-        
-        while arrAnswers.count < 4 {
-            let rand = randomInt(min: 0, max: questions.count-1)
-            if arrAnswers[questions[rand].name] == nil {
-                arrAnswers[questions[rand].name] = true
+        if gameMod == .text {
+            arrAnswers[currentQuestion.name] = true
+            
+            while arrAnswers.count < 4 {
+                let rand = randomInt(min: 0, max: questions.count-1)
+                if arrAnswers[questions[rand].name] == nil {
+                    arrAnswers[questions[rand].name] = true
+                }
+            }
+        } else {
+            arrAnswers[currentQuestion.imagePath] = true
+            
+            while arrAnswers.count < 4 {
+                let rand = randomInt(min: 0, max: questions.count-1)
+                if arrAnswers[questions[rand].imagePath] == nil {
+                    arrAnswers[questions[rand].imagePath] = true
+                }
             }
         }
         

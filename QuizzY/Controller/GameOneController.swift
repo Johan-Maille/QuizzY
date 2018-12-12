@@ -26,13 +26,18 @@ class GameOneController: UIViewController {
         startGame()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     func defautcolor(){
         for button in answers{
             button.backgroundColor = UIColor(red: 191.0/255.0, green: 196.0/255.0, blue: 201.0/255.0, alpha: 1) // Gris
             button.setTitleColor( UIColor.gray,for: UIControlState.disabled)
         }
     }
-   
+    
     func set(index:Int){
         for button in answers{
             button.backgroundColor = UIColor(red: 243.0/255.0, green: 135.0/255.0, blue: 148.0/255.0, alpha: 1) // Rouge
@@ -40,11 +45,6 @@ class GameOneController: UIViewController {
         answers[index].backgroundColor = UIColor(red: 200.0/255.0, green: 236.0/255.0, blue: 160.0/255.0, alpha: 1) // Vert
         answers[index].setTitleColor( UIColor(red: 0/255.0, green: 0/255.0, blue: 0/255.0, alpha: 1),for: UIControlState.disabled)
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func didChooseAnswer(_ sender: Any) {
@@ -116,8 +116,8 @@ class GameOneController: UIViewController {
     
     @objc func questionLoaded() {
         loader.isHidden = true
-//        newGameButton.isHidden = false
-//        question.title = game.currentQuestion.title
+        //        newGameButton.isHidden = false
+        //        question.title = game.currentQuestion.title
     }
     
     @objc func gameOver() {
