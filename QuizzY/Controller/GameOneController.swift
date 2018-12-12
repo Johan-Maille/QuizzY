@@ -12,17 +12,19 @@ class GameOneController: UIViewController {
    
     var timer = Timer()
     var game: Game? = nil
-    var questions: [Question] = [Question(imagePath: "statue liberte", name: "Statue de la Liberté"),
-                                 Question(imagePath: "tour eiffel", name: "Tour Eiffel"),
-                                 Question(imagePath: "taj mahal", name: "Taj Mahal"),
-                                 Question(imagePath: "kremlin", name: "Kremlin"),
-                                 Question(imagePath: "notre dame paris", name: "Notre-Dame de Paris")]
     
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet var answers: [UIButton]!
     @IBOutlet weak var viewTitle: UINavigationItem!
     @IBOutlet weak var scoreLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        toggleEnableAnswers()
+        startGame()
+    }
     
     func defautcolor(){
         for button in answers{
@@ -40,13 +42,6 @@ class GameOneController: UIViewController {
         
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        toggleEnableAnswers()
-        startGame()
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -54,18 +49,17 @@ class GameOneController: UIViewController {
     
     @IBAction func didChooseAnswer(_ sender: Any) {
         if let clickedButton = sender as? UIButton {
+            var functionSelector: Selector
             toggleEnableAnswers()
             set(index: findButton(titleButton: game!.currentQuestion.name))
             game!.answer(with: clickedButton.title(for: .normal)!)
             scoreLabel.text = "\(game!.score) / \(game!.questions.count)"
             if game!.state == .ongoing {
-                timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.loadQuestion), userInfo: nil, repeats: false)
+                functionSelector = #selector(self.loadQuestion)
             } else {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "MainMenu") as! MainMenuController
-                
-                self.present(nextViewController, animated: true, completion: nil)
+                functionSelector = #selector(self.gameOver)
             }
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: functionSelector, userInfo: nil, repeats: false)
             
             //loadQuestion()
         }
@@ -81,8 +75,6 @@ class GameOneController: UIViewController {
             answer.isEnabled = !answer.isEnabled
         }
     }
-    
-   
     
     func setLabelAnswers(arrAnswer: [String]) {
         for (index, answer) in answers.enumerated() {
@@ -104,8 +96,8 @@ class GameOneController: UIViewController {
         loader.isHidden = false
         toggleHideAnswers()
         
-        game!.questions = questions
-        game!.randomArr()
+        game!.questions = QuestionManager.shared.questions
+        game!.randomize()
         loadQuestion()
         
         toggleHideAnswers()
@@ -126,5 +118,13 @@ class GameOneController: UIViewController {
         loader.isHidden = true
 //        newGameButton.isHidden = false
 //        question.title = game.currentQuestion.title
+    }
+    
+    @objc func gameOver() {
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "EndGameOne") as! EndGameOneController
+        
+        nextViewController.game = game
+        self.present(nextViewController, animated: true, completion: nil)
     }
 }

@@ -38,6 +38,14 @@ class Game {
         return questions.count
     }
     
+    func restart() {
+        self.currentIndex = 0
+        self.score = 0
+        self.questions = QuestionManager.shared.questions
+        self.randomize()
+        self.state = .ongoing
+    }
+    
     func indexQuestion() -> String {
         let index = currentIndex+1
         return String(index)
@@ -130,7 +138,7 @@ class Game {
         return res
     }
     
-    func randomArr() {
+    func randomize() {
         var arrIndex: [Int: Int] = [:]
         var arrRes: [Question] = []
         
